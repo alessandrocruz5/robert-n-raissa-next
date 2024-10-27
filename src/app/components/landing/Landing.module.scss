@@ -1,0 +1,202 @@
+// Breakpoint mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "1500" {
+    @media (max-width: 1500px) {
+      @content;
+    }
+  }
+  @if $breakpoint == "1200" {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == "900" {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == "600" {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == "450" {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
+  @if $breakpoint == "300" {
+    @media (max-width: 300px) {
+      @content;
+    }
+  }
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+
+  filter: brightness(60%);
+
+  @include respond-to("900") {
+    object-position: -370px center !important;
+  }
+
+  @include respond-to("600") {
+    object-position: -505px center !important;
+  }
+
+  @include respond-to("450") {
+    object-position: -585px center !important;
+  }
+
+  @include respond-to("300") {
+    object-position: -655px center !important;
+  }
+}
+
+.heroContent {
+  position: absolute;
+  inset: 0;
+  color: white;
+  font-family: "Noto Serif", serif;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.titleContainer {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @include respond-to("1500") {
+    top: 22%;
+  }
+
+  @include respond-to("1200") {
+    top: 19%;
+  }
+
+  @include respond-to("900") {
+    top: 22%;
+  }
+
+  @include respond-to("600") {
+    top: 20%;
+  }
+
+  @include respond-to("450") {
+    top: 22%;
+  }
+
+  @include respond-to("300") {
+    top: 30%;
+  }
+}
+
+.preTitle {
+  margin-bottom: 2.5rem;
+  font-size: 3rem;
+
+  @include respond-to("1500") {
+    margin-bottom: 2.2rem;
+    font-size: 2.2rem;
+  }
+
+  @include respond-to("1200") {
+    margin-bottom: 1.9rem;
+    font-size: 1.8rem;
+  }
+
+  @include respond-to("900") {
+    margin-bottom: 1.3rem;
+    font-size: 1.4rem;
+  }
+
+  @include respond-to("600") {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  @include respond-to("450") {
+    font-size: 1.2rem;
+  }
+
+  @include respond-to("300") {
+    margin-bottom: 1.9rem;
+    font-size: 1rem;
+  }
+}
+
+.mainTitle {
+  font-size: 7.5rem;
+
+  @include respond-to("1500") {
+    font-size: 6rem;
+  }
+
+  @include respond-to("1200") {
+    font-size: 5rem;
+  }
+
+  @include respond-to("900") {
+    font-size: 3.3rem;
+  }
+
+  @include respond-to("600") {
+    font-size: 4rem;
+  }
+
+  @include respond-to("450") {
+    font-size: 2.2rem;
+  }
+
+  @include respond-to("300") {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.date {
+  font-size: 2rem;
+
+  @include respond-to("1500") {
+    font-size: 1.4rem;
+  }
+
+  @include respond-to("1200") {
+    font-size: 1rem;
+  }
+
+  @include respond-to("900") {
+    font-size: 1.3rem;
+  }
+
+  @include respond-to("600") {
+    font-size: 1.5rem;
+  }
+
+  @include respond-to("450") {
+    font-size: 1.2rem;
+  }
+
+  @include respond-to("300") {
+    font-size: 0.8rem;
+  }
+}
