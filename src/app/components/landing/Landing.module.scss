@@ -51,22 +51,22 @@
 
   @include respond-to("900") {
     width: 200%;
-    margin-left: -50%; // Pull image to the left
+    margin-left: -100%; // Pull image to the left
   }
 
   @include respond-to("600") {
     width: 250%;
-    margin-left: -100%;
+    margin-left: -120%;
   }
 
   @include respond-to("450") {
     width: 300%;
-    margin-left: -140%;
+    margin-left: -160%;
   }
 
   @include respond-to("300") {
     width: 350%;
-    margin-left: -178%;
+    margin-left: -198%;
   }
 }
 
