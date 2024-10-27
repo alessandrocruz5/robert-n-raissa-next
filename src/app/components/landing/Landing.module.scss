@@ -42,29 +42,57 @@
   align-items: center;
 }
 
+.imageWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+
+  @include respond-to("900") {
+    width: 200%;
+    margin-left: -50%; // Pull image to the left
+  }
+
+  @include respond-to("600") {
+    width: 250%;
+    margin-left: -100%;
+  }
+
+  @include respond-to("450") {
+    width: 300%;
+    margin-left: -140%;
+  }
+
+  @include respond-to("300") {
+    width: 350%;
+    margin-left: -178%;
+  }
+}
+
 .heroImage {
   position: absolute !important;
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-
+  // transform: scale(1.5) !important;
   filter: brightness(60%);
 
-  @include respond-to("900") {
-    object-position: -370px center !important;
-  }
+  // @include respond-to("900") {
+  //   transform: translateX(-15%) !important;
+  // }
 
-  @include respond-to("600") {
-    object-position: -505px center !important;
-  }
+  // @include respond-to("600") {
+  //   transform: translateX(-25%) !important;
+  // }
 
-  @include respond-to("450") {
-    object-position: -585px center !important;
-  }
+  // @include respond-to("450") {
+  //   transform: translateX(-30%) !important;
+  // }
 
-  @include respond-to("300") {
-    object-position: -655px center !important;
-  }
+  // @include respond-to("300") {
+  //   transform: translateX(-35%) !important;
+  // }
 }
 
 .heroContent {
@@ -131,7 +159,7 @@
 
   @include respond-to("600") {
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   @include respond-to("450") {
@@ -160,7 +188,7 @@
   }
 
   @include respond-to("600") {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   @include respond-to("450") {

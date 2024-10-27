@@ -14,12 +14,14 @@ const Landing: React.FC = () => {
     <>
       <div id="hero" className={styles.hero}>
         <Header />
-        <Image
-          src={landingImage}
-          alt="Landing image"
-          className={styles.heroImage}
-          priority
-        />
+        <div className={styles.imageWrapper}>
+          <Image
+            src={landingImage}
+            alt="Landing image"
+            className={styles.heroImage}
+            priority
+          />
+        </div>
         <div className={styles.heroContent}>
           <div className={styles.titleContainer}>
             <h2 className={styles.preTitle}>We're getting married!</h2>
