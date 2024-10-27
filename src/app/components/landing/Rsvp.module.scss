@@ -49,25 +49,25 @@
     filter: brightness(0.5);
   }
 
-  @include respond-to("900") {
-    width: 90%;
-    margin-left: -50%; // Pull image to the left
-  }
+  // @include respond-to("900") {
+  //   width: 90%;
+  //   margin-left: -50%; // Pull image to the left
+  // }
 
-  @include respond-to("600") {
-    width: 90%;
-    margin-left: -75%;
-  }
+  // @include respond-to("600") {
+  //   width: 90%;
+  //   margin-left: -75%;
+  // }
 
-  @include respond-to("450") {
-    width: 90%;
-    margin-left: -100%;
-  }
+  // @include respond-to("450") {
+  //   width: 90%;
+  //   margin-left: -100%;
+  // }
 
-  @include respond-to("300") {
-    width: 90%;
-    margin-left: -125%;
-  }
+  // @include respond-to("300") {
+  //   width: 90%;
+  //   margin-left: -125%;
+  // }
 }
 
 .content {
