@@ -50,21 +50,21 @@
 
   filter: brightness(60%);
 
-  // @include respond-to("900") {
-  //   object-position: -370px center !important;
-  // }
+  @include respond-to("900") {
+    object-position: -370px center !important;
+  }
 
-  // @include respond-to("600") {
-  //   object-position: -505px center !important;
-  // }
+  @include respond-to("600") {
+    object-position: -505px center !important;
+  }
 
-  // @include respond-to("450") {
-  //   object-position: -585px center !important;
-  // }
+  @include respond-to("450") {
+    object-position: -585px center !important;
+  }
 
-  // @include respond-to("300") {
-  //   object-position: -655px center !important;
-  // }
+  @include respond-to("300") {
+    object-position: -655px center !important;
+  }
 }
 
 .heroContent {
