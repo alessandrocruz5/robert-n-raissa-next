@@ -17,12 +17,14 @@ const Rsvp: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image
-          src={rsvpImage}
-          alt="RSVP"
-          className={styles.backgroundImage}
-          priority
-        />
+        <div className={styles.backgroundImageWrapper}>
+          <Image
+            src={rsvpImage}
+            alt="RSVP"
+            className={styles.backgroundImage}
+            priority
+          />
+        </div>
 
         <div className={styles.content}>
           <h1>We hope you can make it!</h1>
