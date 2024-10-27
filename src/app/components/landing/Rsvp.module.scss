@@ -52,12 +52,12 @@
 
   @include respond-to("900") {
     width: 200%;
-    left: -40%;
+    left: -45%;
   }
 
   @include respond-to("600") {
     width: 250%;
-    left: -55%;
+    left: -60%;
   }
 
   @include respond-to("300") {
