@@ -50,22 +50,22 @@
   }
 
   @include respond-to("900") {
-    width: 200%;
+    width: 90%;
     margin-left: -50%; // Pull image to the left
   }
 
   @include respond-to("600") {
-    width: 250%;
+    width: 90%;
     margin-left: -75%;
   }
 
   @include respond-to("450") {
-    width: 300%;
+    width: 90%;
     margin-left: -100%;
   }
 
   @include respond-to("300") {
-    width: 350%;
+    width: 90%;
     margin-left: -125%;
   }
 }
