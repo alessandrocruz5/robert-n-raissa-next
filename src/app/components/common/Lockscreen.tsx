@@ -32,6 +32,7 @@ const Lockscreen: React.FC = () => {
     } else {
       setIsIncorrect(true);
       setFormDisabled(false);
+      setPassword("");
       await new Promise((resolve) => setTimeout(resolve, 300));
       setIsIncorrect(false);
     }
