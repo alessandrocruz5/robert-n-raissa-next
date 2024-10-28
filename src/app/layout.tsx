@@ -14,8 +14,41 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Robert and Raissa",
-  description: "Wedding website for Robert and Raissa",
+  title: "Robert & Raissa",
+  description:
+    "Welcome to our wedding website. Join us in celebrating our special day!",
+  metadataBase: new URL("https://robert-n-raissa.vercel.app"),
+  openGraph: {
+    title: "Robert & Raissa",
+    description:
+      "Welcome to our wedding website. Join us in celebrating our special day!",
+    url: "https://robert-n-raissa.vercel.app",
+    siteName: "Robert & Raissa Wedding",
+    images: [
+      {
+        url: "/og-image.jpg", // This will be automatically converted to absolute URL
+        width: 1200,
+        height: 630,
+        alt: "Robert and Raissa Wedding",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Robert & Raissa",
+    description:
+      "Welcome to our wedding website. Join us in celebrating our special day!",
+    images: ["/og-image.jpg"], // This will be automatically converted to absolute URL
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -25,11 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
