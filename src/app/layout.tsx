@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Robert & Raissa's Wedding Details",
     images: [
       {
-        url: `${SITE_URL}/og-image.jpg`, // This will be automatically converted to absolute URL
+        url: "/og-image.jpg", // This will be automatically converted to absolute URL
         width: 1200,
         height: 630,
         alt: "Robert and Raissa Wedding",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Robert & Raissa",
     description:
       "Welcome to our wedding website. Join us in celebrating our special day!",
-    images: [`${SITE_URL}/og-image.jpg`], // This will be automatically converted to absolute URL
+    images: ["/og-image.jpg"], // This will be automatically converted to absolute URL
   },
   robots: {
     index: true,
