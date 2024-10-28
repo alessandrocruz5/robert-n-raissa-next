@@ -16,11 +16,31 @@ const Lockscreen: React.FC = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
 
+  useEffect(() => {
+    // Check if user has previously unlocked the site
+    const unlockTimestamp = localStorage.getItem("siteUnlocked");
+    if (unlockTimestamp) {
+      const now = new Date().getTime();
+      const unlockTime = parseInt(unlockTimestamp);
+      const oneDayInMs = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
+      // If less than 24 hours have passed, auto-unlock
+      if (now - unlockTime < oneDayInMs) {
+        setIsHidden(true);
+        setIsLocked(false);
+      } else {
+        // If more than 24 hours have passed, remove the stored timestamp
+        localStorage.removeItem("siteUnlocked");
+      }
+    }
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormDisabled(true);
 
     if (password === "UnliRaisForRobert") {
+      localStorage.setItem("siteUnlocked", new Date().getTime().toString());
       setIsUnlocking(true);
       setShowWelcome(true);
       // Wait for animation to complete before hiding the screen
