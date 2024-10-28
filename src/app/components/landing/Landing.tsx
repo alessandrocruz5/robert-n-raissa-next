@@ -8,10 +8,15 @@ import Registry from "./Registry";
 import Rsvp from "./Rsvp";
 import Footer from "../sections/Footer";
 import styles from "./Landing.module.scss";
+import Lockscreen from "../common/Lockscreen";
+import Countdown from "../common/Countdown";
 
 const Landing: React.FC = () => {
   return (
     <>
+      <div>
+        <Lockscreen />
+      </div>
       <div id="hero" className={styles.hero}>
         <Header />
         <div className={styles.imageWrapper}>
@@ -30,6 +35,14 @@ const Landing: React.FC = () => {
           </div>
         </div>
       </div>
+      <section
+        className={styles.countdownSection}
+        style={{ backgroundColor: "#cd8f92" }}
+      >
+        <div className={styles.container}>
+          <Countdown targetDate="2024-12-17T00:00:00" variant="landing" />
+        </div>
+      </section>
       <section id="location" className={styles.section}>
         <Location />
       </section>

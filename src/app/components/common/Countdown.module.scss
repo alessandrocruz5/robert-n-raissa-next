@@ -1,0 +1,87 @@
+.countdown {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  &.lock {
+    margin-top: 2rem;
+    color: white;
+
+    .timeUnit {
+      .number {
+        font-size: 2rem;
+        color: white;
+      }
+
+      .label {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  &.landing {
+    padding: 4rem 0;
+    background-color: #f8f8f8;
+
+    .timeUnit {
+      .number {
+        font-size: 3rem;
+        color: #cd8f92;
+      }
+
+      .label {
+        color: #666;
+      }
+    }
+  }
+
+  .timeUnit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+
+    .number {
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .label {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .countdown {
+    gap: 1rem;
+
+    &.landing {
+      .timeUnit {
+        .number {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &.lock {
+      .timeUnit {
+        .number {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .timeUnit {
+      min-width: 60px;
+
+      .label {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
